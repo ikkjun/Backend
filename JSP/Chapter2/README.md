@@ -1,4 +1,4 @@
-# Chapter 2. 웹 프로그래밍 기초
+# Chapter 02 웹 프로그래밍 기초
 ## 01 웹과 웹 프로그래밍
 ### 1.1 URL과 웹 페이지
 URL(Uniform Resource Locator): 웹 브라우저의 주소줄에 표시되는 것
