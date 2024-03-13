@@ -1,8 +1,8 @@
 # JSP 웹 프로그래밍 
 ## PART 01 웹 프로그래밍 기초
 ### CHAPTER 01 들어가며
-### [CHAPTER 02 웹 프로그래밍 기초]((./Chapter2))
-### CHAPTER 03 JSP로 시작하는 웹 프로그래밍
+### [CHAPTER 02 웹 프로그래밍 기초](https://github.com/ikkjun/Backend/tree/main/JSP/Chapter2)
+### [CHAPTER 03 JSP로 시작하는 웹 프로그래밍](https://github.com/ikkjun/Backend/tree/main/JSP/Chapter3)
 ### CHAPTER 04 필수 이해 요소
 <br>
 
