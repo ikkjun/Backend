@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Backend.iml" filepath="$PROJECT_DIR$/.idea/Backend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JSP/JSP.iml" filepath="$PROJECT_DIR$/JSP/JSP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j/Chapter2/Chapter2.iml" filepath="$PROJECT_DIR$/j/Chapter2/Chapter2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/Spring.iml" filepath="$PROJECT_DIR$/Spring/Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/j/j.iml" filepath="$PROJECT_DIR$/j/j.iml" />
     </modules>
   </component>
 </project>
