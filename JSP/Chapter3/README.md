@@ -118,17 +118,52 @@ HTML <form>의 각 입력요소는 name 속성의 값이 입력 요소의 이름
 요청 URL을 처리할 웹 프로그램은 웹 브라우저가 전송한 요청 파라미터를 이용해서 알맞은 기능을 구현해야 한다.
 
 #### 5.2.2 request 기본 객체의 요청 파라미터 관련 메서드
-- request 기본 객체의 파라미터 읽기 메서드
-  - getParameter(String name) 
-  - getParameterValues(String name)
-  - getParameterNames()
-  - getParameterMap()
+##### request 기본 객체의 파라미터 읽기 메서드
+- getParameter(String name) 
+- getParameterValues(String name)
+- getParameterNames()
+- getParameterMap()
 입력한 데이터는 요청 파라미터로 전송되며, request 기본 객체의 메서드를 사용해서 요청 파라미터를 읽어올 수 있다.
 
 같은 이름으로 전송되는 파라미터를 request.getParameter() 메서드는 모두 다 읽어오지 못하며, 오직 한 개의 값만 읽어올 수 있다. 
 반면에 request.getParameterValues() 메서드는 같은 이름으로 전송된 파라미터의 값들을 배열로 리턴하기 때문에, 같은 이름을 가진 모든 파라미터의 값을 사용할 때에는 getParameter() 메서드가 아닌 getParameterValues() 메서드를 사용해야 한다.
 
 체크박스를 아무것도 선택하지 않고 전송 버튼을 클릭하면 파라미터가 전송되지 않는다.
+
+#### 5.2.3 GET 방식 전송과 POST 방식 전송
+GET 방식과 POST 방식의 차이점은 전송 방식에 있다.<br> 
+GET 방식은 요청 URL에 파라미터를 붙여서 전송한다.<br>
+URL에 파라미터가 함께 전송되는 GET 방식과 달리 POST 방식은 데이터 영역을 이용해서 파라미터를 전송한다.<br>
+
+GET 방식은 웹 브라우저, 웹 서버 또는 웹 컨테이너에 따라 전송할 수 있는 파라미터 값의 길이에 제한이 있을 수 있다. 
+반면에 POST 방식은 데이터 영역을 이용해서 데이터를 전송하기 때문에 웹 브라우저나 웹 서버 등에 상관없이 전송할 수 있는 파라미터의 길이에 제한이 없다.
+
+#### 5.2.4 요청 파라미터 인코딩
+웹 브라우저는 웹 서버에 파라미터를 전송할 때 알맞은 캐릭터 셋을 이용해서 파라미터 값을 인코딩한다.
+반대로 웹 서버는 알맞은 캐릭터 셋을 이용해서 웹 브라우저가 전송한 파라미터 데이터를 디코딩한다.
+
+어떤 캐릭터 셋을 사용할지의 여부는 두 전송 방식 - GET 방식과 POST 방식 - 에 따라 달라진다.
+##### POST 방식
+입력 폼을 보여주는 응답화면이 사용하는 캐릭터 셋을 사용한다.<br>
+request.getParameter() 메서드나 request.getParameterValues() 메서드는 요청 파라미터의 값을 읽어올 때 request.setCharacterEncoding()으로 지정한 캐릭터 셋을 이용해서 디코딩한다.
+
+##### GET 방식
+|GET 방식 이용 시 파라미터 전송 방법|인코딩 결정|
+|---|---|
+|<a\> 태그의 링크 태그에 쿼리 문자열 추가|웹 페이지 인코딩 사용|
+|HTML 폼(FORM)의 method 속성값을 "GET"으로 지정해서 폼을 전송|웹 페이지 인코딩 사용|
+|웹 브라우저의 주소에 직접 쿼리 문자열을 포함하는 URL 입력|웹 브라우저마다 다름|
+
+GET 방식으로 전송된 파라미터에 대해서는 request.setCharacterEncoding() 메서드로 지정한 캐릭터 셋이 적용되지 않는다.
+
+### 5.3 요청 헤더 정보의 처리
+Accept: 브라우저(클라이언트) 에서 웹서버로 요청시 요청메시지에 담기는 헤더<br>
+User-Agent: OS, 브라우저<br>
+Content-Type: HTTP 메시지(요청과 응답 모두)에 담겨 보내는 데이터의 형식을 알려주는 헤더<br>
+Referer: 내가 어떤 사이트에서 왔는지 알려주는 헤더<br>
+Accept-Language<br>
+
+
 ## 06 response 기본 객체
 ### 6.1 웹 브라우저에 헤더 정보 전송하기 
 ### 6.2 웹 브라우저 캐시 제어를 위한 응답 헤더 입력
