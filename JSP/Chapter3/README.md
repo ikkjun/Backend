@@ -193,3 +193,7 @@ response.sendRedirect(String location)
 
 response.sendRedirect() 메서드를 사용하는 경우 글자들을 URL에 포함시키려면 인코딩한 쿼리 문자열을 사용해야 한다.
 java.net.URLEncoder클래스의 URLEncoder.encode() 메서드를 사용하면 파라미터 값으로 사용될 문자열을 지정한 캐릭터 셋으로 인코딩할 수 있다.
+                                                                    
+## 072 JSP 주석
+스크립트릿과 선언부의 코드 블록은 자바 코드이므로 자바의 주석을 사용할 수 있다.
+JSP 코드 자체를 주석 처리하고 싶다면 '<%--'와 '--%>'사이에 코드를 위치시키면 된다. 
