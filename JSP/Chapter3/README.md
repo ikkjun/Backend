@@ -190,3 +190,6 @@ response 기본 객체는 다음의 메서드를 사용해서 웹 브라우저�
 ```java
 response.sendRedirect(String location)
 ```
+
+response.sendRedirect() 메서드를 사용하는 경우 글자들을 URL에 포함시키려면 인코딩한 쿼리 문자열을 사용해야 한다.
+java.net.URLEncoder클래스의 URLEncoder.encode() 메서드를 사용하면 파라미터 값으로 사용될 문자열을 지정한 캐릭터 셋으로 인코딩할 수 있다.
