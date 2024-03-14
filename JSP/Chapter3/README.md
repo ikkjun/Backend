@@ -118,7 +118,15 @@ HTML <form>의 각 입력요소는 name 속성의 값이 입력 요소의 이름
 요청 URL을 처리할 웹 프로그램은 웹 브라우저가 전송한 요청 파라미터를 이용해서 알맞은 기능을 구현해야 한다.
 
 #### 5.2.2 request 기본 객체의 요청 파라미터 관련 메서드
+- request 기본 객체의 파라미터 읽기 메서드
+  - getParameter(String name) 
+  - getParameterValues(String name)
+  - getParameterNames()
+  - getParameterMap()
 입력한 데이터는 요청 파라미터로 전송되며, request 기본 객체의 메서드를 사용해서 요청 파라미터를 읽어올 수 있다.
+
+같은 이름으로 전송되는 파라미터를 request.getParameter() 메서드는 모두 다 읽어오지 못하며, 오직 한 개의 값만 읽어올 수 있다. 
+반면에 request.getParameterValues() 메서드는 같은 이름으로 전송된 파라미터의 값들을 배열로 리턴하기 때문에, 같은 이름을 가진 모든 파라미터의 값을 사용할 때에는 getParameter() 메서드가 아닌 getParameterValues() 메서드를 사용해야 한다.
 
 ## 06 response 기본 객체
 ### 6.1 웹 브라우저에 헤더 정보 전송하기 
