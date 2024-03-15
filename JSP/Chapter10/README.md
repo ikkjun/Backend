@@ -59,3 +59,11 @@ session이 생성된 경우에만 session 객체를 구하고 싶다면, getSess
     HttpSession httpSession = request.getSession(false);
 %>
 ```
+
+## 02 세션을 사용한 로그인 상태 유지
+1. 로그인에 성공하면 session 기본 객체의 특정 속성에 데이터를 기록한다.
+2. 이후로 session 기본 객체의 특정 속성이 존재하면 로그인한 것으로 간주한다.
+3. 로그아웃할 경우 session.invalidate() 메서드를 호출하여 세션을 종료한다.
+
+### 2.1 인증된 사용자 정보 session 기본 객체에 저장하기
+세션을 사용해서 로그인 상태를 유지하려면 session 기본 객체의 속성에 로그인 성공 정보를 저장하면 된다.
