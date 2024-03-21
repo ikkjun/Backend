@@ -7,7 +7,7 @@
 <br>
 
 ## PART 02 필수 습득
-### CHAPTER 05 기본 객체와 영역
+### [CHAPTER 05 기본 객체와 영역](https://github.com/ikkjun/Backend/tree/main/JSP/Chapter5)
 ### [CHAPTER 06 에러 처리](https://github.com/ikkjun/Backend/tree/main/JSP/Chapter6)
 ### CHAPTER 07 페이지 모듈화와 요청 흐름 제어  
 ### CHAPTER 08 자바빈과 \<jsp:useBean> 액션 태그
