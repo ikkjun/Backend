@@ -11,7 +11,7 @@
 ### [CHAPTER 06 에러 처리](https://github.com/ikkjun/Backend/tree/main/JSP/Chapter6)
 ### [CHAPTER 07 페이지 모듈화와 요청 흐름 제어](https://github.com/ikkjun/Backend/tree/main/JSP/Chapter7)  
 ### [CHAPTER 08 자바빈과 \<jsp:useBean> 액션 태그](https://github.com/ikkjun/Backend/tree/main/JSP/Chapter8)
-### CHAPTER 09 클라이언트와의 대화 1 : 쿠키
+### [CHAPTER 09 클라이언트와의 대화 1 : 쿠키](https://github.com/ikkjun/Backend/tree/main/JSP/Chapter9)
 ### [CHAPTER 10 클라이언트와의 대화 2 : 세션](https://github.com/ikkjun/Backend/tree/main/JSP/Chapter10)
 ### CHAPTER 11 표현 언어(Expression Language)
 ### CHAPTER 12 표준 태그 라이브러리(JSTL)
