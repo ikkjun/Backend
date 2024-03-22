@@ -65,3 +65,10 @@ JSESSIONID인 쿠키가 존재하는데, 이 쿠키는 JSP/서블릿에서 세�
 response.addCookie()로 쿠키를 추가하면 실제로 Set-Cookie 헤더를 통해서 전달한다.
 
 ## 02 쿠키 처리를 위한 유틸리티 클래스
+### 2.1 Cookies 클래스를 이용한 쿠키 생성
+쿠키를 생성할 때는 Cookies.createCookie() 메서드를 사용한다.
+
+### 2.2 Cookies 클래스를 이용한 쿠키 읽기
+웹 브라우저가 전송한 쿠키를 읽으려면 Cookies 객체를 생성한 후 getCookie(), getValue(), exists() 등의 메서드를 사용하면 된다.
+
+## 03 쿠키를 사용한 로그인 상태 유지
