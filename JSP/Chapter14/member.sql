@@ -26,3 +26,15 @@ insert into member_history values('ikjun96',
 	)
 );
 select * from member_history;
+
+create table ITEM (
+	item_id int not null primary key
+    , ame varchar(100)
+) engine=InnoDB default character set = utf8mb4;
+
+create table ITEM_DETAIL (
+	item_id int not null primary key
+    , detail varchar(200)
+) engine = InnoDB default character set = utf8mb4;
+
+select * from item;
