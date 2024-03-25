@@ -43,3 +43,7 @@ Connection, Statement 그리고 ResultSet과 같은 클래스는 사용이 끝�
 한 개의 서비스 객체를 여러 번 사용하는 것과 매번 새로운 서비스 객체를 사용하는 것이 기능상 차이가 없다면, 
 매번 새로운 서비스 객체를 생성하지 않고 한 개의 객체를 재사용하도록 구현하려고 할 때 싱글톤(Singleton) 패턴을 사용한다.
 
+### 1.5 Connectio을 제공하는 ConncetionProvider 만들기
+JDBC URL과 같은 DB 연결 설정 정보를 더욱 쉽게 변경할 수 있으려면, DriverManager.getConnection()을 직접 호출해서 
+Connection 객체를 구하기 보다는 Connection을 제공해주는 기능을 별도의 클래스로 분리해주어야 한다.
+
