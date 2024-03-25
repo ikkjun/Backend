@@ -21,6 +21,11 @@ DAO 클래스가 제공하는 메서드:<br>
 DAO가 쿼리를 실행하려면 Statement나 PreparedStatement가 필요한데, 이 두 객체는 Connection 객체로부터 구할 수 있다.
 
 Connection 객체를 구하는 방법
-- DAO 클래스의 메서드에서 직접 Connection을 생성
-- DAO 객체를 생성할 때 생성자로 Connection을 전달받기
-- DAO 클래스의 메서드 파라미터로 Connection을 전달받기
+- DAO 클래스의 메서드에서 직접 Connection을 생성하기<br>DAO클래스를 사용할 때에는 DAO객체를 생성하고 메서드를 호출한다.<br>단점: 메서드를 실행할 때마다 매번 Connection을 생성한다. 이로 인해 두 개의 메서드를 하나의 트랜잭션으로 처리할 수 없다.
+- DAO 객체를 생성할 때 생성자로 Connection을 전달받기<br>각 메서드는 하나의 Connection 객체를 사용하기 때문에 JDBC 트랜잭션을 이용할 수 있다.<br>단점: 매번 새로운 Connection을 생성한다.
+- DAO 클래스의 메서드 파라미터로 Connection을 전달받기<br>한 개의 Connection객체를 사용하므로 JDBC 트랜잭션을 사용할 수 있으며 DAO 객체를 매번 생성하지 않아도 된다.<br>단점: DAO 객체의 메서드를 실행할 때마다 Connection 객체를 파라미터로 전달해야 하므로 메서드 호출 코드가 다소 길어진다.
+
+#### 1.2.2 간단한 close() 및 rollback() 처리 코드를 위한 JdbcUtil
+Connection, Statement 그리고 ResultSet과 같은 클래스는 사용이 끝나면 close() 메서드를 호출해서 자원을 반환해야 한다.
+그래서 항상 close() 할 수 있도록 finally 블록에서 close() 메서드를 호출하도록 구현한다.
+
