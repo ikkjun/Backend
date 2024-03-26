@@ -35,4 +35,33 @@ getQueryString() → name은 key, value는 value의 형태로 map에 저장된�
 - 서버(server): 서비스(service)를 제공하는 애플리케이션
 
 ## 클라이언트와 서버
+### 2. 서버의 종류
+- Email server
+- File servet
+- Web server
+WAS: 다른 서버에 있는 것을 내 컴퓨터처럼 실행하는 것
+
+### 3. 서버의 포트
+포트로 서버를 결정한다. 포트와 프로그램을 연결하는 것을 바인딩이라고 한다.
+
+URI(uniform resource location)<br>
+resource의 종류
+- 정적: 파일 ← Web Server
+- 동적: 프로그램 관리 ← Web Application Server(WAS)
+
+### 4. 웹 어플리케이션 서버(WAS)란?
+웹 어플리케이션을 서비스하는 서버<br>
+application = 프로그램
+web application = 브라우저를 통한 서비스
+
+### 5. Tomcat의 내부 구조
+브라우저에서 요청을 보내면 톰캣의 서버 중에서 하나의 쓰레드가 받아서 서비스르르 한다.
+프로토콜을 이용해서 HTTP와 연결을 한다.
+한 개의 서버에 여러 개의 서블릿이 있다.
+
+### 6. Tomcat의 설정 파일 - server.xml, web.xml
+- 톰캣설치경로/conf/server.xml: Tomcat 서버 설정 파일
+- 톰캣설치경로/conf/web.xml: Tomcat의 모든 web app의 공통설정
+- 웹앱이름/WEB-INF/web.xml: web app의 개별 설정
+
 
