@@ -88,7 +88,7 @@ EL은 for나 while같은 반복문을 제공하지 않는다. 스트림 API가 �
 ### 6.9 Optional 타입
 원소가 하나도 없는 스트림에서 average(), min(), max() 등을 구하면 원소가 하나도 없으므로 최소값 자체가 존재하지 않는다. 
 이렇게 결과값이 존재하거나 존재하지 않는 경우가 있을 때 사용하는 타입이 Optional이다.
-### 6.10 sum()과 average()를 이용한 수치 연산 결과 생ㅅ어
+### 6.10 sum()과 average()를 이용한 수치 연산 결과 생성
 ### 6.11 min()과 max()를 이용한 최소/최대 구하기
 ### 6.12 anyMatch(), allMatch(), noneMatch()를 이용한 존재 여부 확인
 - anyMatch(): 스트림에서 한 원소라도 조건을 충족할 때 true를 갖는 Optional 리턴
