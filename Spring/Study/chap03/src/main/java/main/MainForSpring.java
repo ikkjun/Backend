@@ -17,7 +17,7 @@ public class MainForSpring {
         ctx = new AnnotationConfigApplicationContext(AppCtx.class);
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         while(true) {
-            System.out.println("명령어를 입력해주세요");
+            System.out.println("명령어를 입력해주세요: ");
             String command = reader.readLine();
             if (command.equalsIgnoreCase("exit")) {
                 System.out.println("종료합니다.");
@@ -31,6 +31,12 @@ public class MainForSpring {
                 continue;
             } else if (command.equals("list")) {
                 processListCommand();
+                continue;
+            } else if (command.startsWith("info")) {
+                processInfoCommand(command.split(" "));
+                continue;
+            } else if (command.equals("version")) {
+                processVersionCommand();
                 continue;
             }
             printHelp();
@@ -91,5 +97,19 @@ public class MainForSpring {
     private static void processListCommand() {
         MemberListPrinter listPrinter = ctx.getBean("listPrinter", MemberListPrinter.class);
         listPrinter.printAll();
+    }
+
+    private static void processInfoCommand(String[] arg) {
+        if (arg.length != 2) {
+            printHelp();
+            return;
+        }
+        MemberInfoPrinter infoPrinter = ctx.getBean("infoPrinter", MemberInfoPrinter.class);
+        infoPrinter.printMemberInfo(arg[1]);
+    }
+
+    private static void processVersionCommand() {
+        VersionPrinter versionPrinter = ctx.getBean("versionPrinter", VersionPrinter.class);
+        versionPrinter.print();
     }
 }

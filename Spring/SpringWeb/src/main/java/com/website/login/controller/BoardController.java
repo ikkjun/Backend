@@ -1,6 +1,10 @@
-package com.website.login;
+package com.website.login.controller;
 
+import com.website.login.BoardDto;
+import com.website.login.dao.BoardDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -8,7 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
+@RequestMapping("/board")
 public class BoardController {
+    @Autowired
+    BoardDao boardDao;
     /**
      *
      * @param request request를 받는 매개변수
@@ -30,7 +37,7 @@ public class BoardController {
      * @param request request를 받는 매개변수
      * @return  로그인 여부에 따라 가야 할 페이지를 반환한다.
      */
-    @GetMapping("/board")
+    @GetMapping("/list")
     public String boardPage(HttpServletRequest request) {
         System.out.println("BoardController 도착");
         String toURL = String.valueOf(request.getRequestURI());
@@ -41,4 +48,22 @@ public class BoardController {
             return "redirect:/login/form?toURL="+toURL;
         }
     }
+
+    // read 읽기
+    @GetMapping("/read")
+    public String readBoard(HttpServletRequest request, Model m) {
+        BoardDto boardDto = null;
+        int boardno = Integer.parseInt(request.getParameter("boardno"));
+        System.out.println("boardno= " + boardno);
+        try {
+            boardDto = boardDao.select(boardno);
+            m.addAttribute("boardDto",boardDto );
+            System.out.println("boardDto = " + boardDto);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "boardList";
+    }
+
+    // BoardDao read해서 화면에 보여주기
 }

@@ -1,5 +1,8 @@
-package com.website.login;
+package com.website.login.controller;
 
+import com.website.login.UserDto;
+import com.website.login.dao.UserDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,9 +16,22 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/login")
 public class LoginController {
+    @Autowired
+    UserDao userDao;
+
     @GetMapping("/form")
     public String loginForm() {
         return "loginForm";
+    }
+
+    public boolean validateLogin(String id, String pwd) {
+        UserDto userDto = null;
+        try {
+            userDto = userDao.select(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return userDto != null && userDto.getPwd().equals(pwd);
     }
 
     @PostMapping("/check")
@@ -30,7 +46,7 @@ public class LoginController {
         System.out.println("fromURL: " + fromURL);
         System.out.println("toURL: " + toURL);
 
-        if (id.equals(pwd)) {	// id와 pwd 일치하면
+        if (validateLogin(id, pwd)) {	// id와 pwd 일치하면
             HttpSession session = request.getSession();	// session 생성
             session.setAttribute("authUser", id);	// session의 authUser속성을 id로 설정
 
@@ -56,6 +72,8 @@ public class LoginController {
             return "redirect:/login/form";
         }
     }
+
+
 
     @GetMapping("/out")
     public String logout(HttpServletRequest request, HttpServletResponse response) {

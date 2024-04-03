@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.website.login.dao.BoardMapper">
+    <!--1. select-->
+    <!--    select * from board where bno = 30;-->
+    <select id="select" parameterType="int" resultType="BoardDto">
+        SELECT *
+        FROM board
+        WHERE bno = #{bno}
+    </select>
+
+    <!--2. selectAll-->
+    <select id="selectAll" resultType="BoardDto">
+        SELECT *
+        FROM board
+    </select>
+
+    <!--3. count-->
+    <!--    select count(*) from board;-->
+    <select id="count" resultType="int">
+        SELECT count(*)
+        FROM board
+    </select>
+
+    <!--4. insert-->
+    <insert id="insert" parameterType="BoardDto">
+        INSERT INTO
+            board (title, content, writer, view_cnt, comment_cnt, reg_date)
+        VALUES
+            (#{title}, #{content}, #{writer}, #{view_cnt}, #{comment_cnt}, #{reg_date})
+    </insert>
+
+    <!--5. deleteAll-->
+    <!--    delete from board;-->
+    <delete id="deleteAll">
+        DELETE FROM board
+    </delete>
+
+    <!--6. delete-->
+    <!--    delete from board where bno = 3;-->
+    <delete id="delete" parameterType="int">
+        DELETE FROM board
+        WHERE bno = #{bno}
+    </delete>
+
+    <!--7. update-->
+    <!--    update board set title = "title11", content = "content11", reg_date = now() where title = "title1";-->
+    <update id="update" parameterType="BoardDto">
+        UPDATE board
+        SET title = #{title},
+            content = #{content},
+            reg_date = #{reg_date}
+        WHERE bno = #{bno}
+    </update>
+</mapper>

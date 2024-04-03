@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="org.springframework.beans.factory.annotation.Autowired" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 
@@ -23,16 +25,22 @@
     <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
 </header>
 
+
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content">
         <div class="w3-twothird">
             <h1>Board Page</h1>
-            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+            <form action="/board/read" method="get">
+                <input name = "boardno" type="text">
+                <button type="submit">Search</button>
+            </form>
 
-            <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <c:if test="${boardDto != null}">
+                <p>게시물 번호: ${boardDto.bno}</p>
+                <p>게시물 제목: ${boardDto.title}</p>
+                <p>게시물 내용: ${boardDto.content}</p>
+            </c:if>
         </div>
 
         <div class="w3-third w3-center">
@@ -50,6 +58,7 @@
 
         <div class="w3-twothird">
             <h1>Board Page</h1>
+
             <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
 
             <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
