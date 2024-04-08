@@ -1,20 +1,20 @@
-# 01. 데이터 모델링 이론
+# [01. 데이터 모델링 이론](https://github.com/ikkjun/Backend/tree/main/DataModeling/src/TheoryOfDataModeling)
 ## 데이터 모델링이란
 ## ER 모델 구성 요소
 ## 관계형 데이터 모델 이론
 
-# 02. 개념 모델링
+# [02. 개념 모델링](https://github.com/ikkjun/Backend/tree/main/DataModeling/src/ConceptualModeling)
 ## 데이터 모델링 접근 방법
 ## 개념 모델링
 
-# 03. 논리 모델링
+# [03. 논리 모델링](https://github.com/ikkjun/Backend/tree/main/DataModeling/src/LogicalModeling)
 ## 논리 모델링
 ## 엔티티 정의 및 상세화
 ## 관계 도출 및 정의
 ## 속성 도출 및 정의
 ## 데이터 표준화
 
-# 04. 물리 모델링
+# [04. 물리 모델링](https://github.com/ikkjun/Backend/tree/main/DataModeling/src/PhysicalModeling)
 ## 물리 모델링이란
 ## 테이블 설계
 ## 관계 설계
