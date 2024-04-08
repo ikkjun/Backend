@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a3d35947-50eb-4f3f-aa3d-52a24d88048d" name="Changes" comment="data modeling study">
       <change beforePath="$PROJECT_DIR$/../DataModeling/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../DataModeling/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataModeling/src/ConceptualModeling/ConceptualModel.md" beforeDir="false" afterPath="$PROJECT_DIR$/../DataModeling/src/ConceptualModeling/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataModeling/src/TheoryOfDataModeling/data_modeling_theory.md" beforeDir="false" afterPath="$PROJECT_DIR$/../DataModeling/src/TheoryOfDataModeling/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +112,7 @@
       <workItem from="1709169846487" duration="2357000" />
       <workItem from="1709221241329" duration="130000" />
       <workItem from="1712543430719" duration="381000" />
-      <workItem from="1712544056194" duration="389000" />
+      <workItem from="1712544056194" duration="553000" />
     </task>
     <task id="LOCAL-00001" summary="study data modeling">
       <option name="closed" value="true" />
