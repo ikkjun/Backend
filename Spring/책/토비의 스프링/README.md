@@ -6,51 +6,51 @@
 
 ## Vol. 1 스프링의 이해와 원리
 ### [1장 오브젝트와 의존관계](https://github.com/ikkjun/Backend/tree/main/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#1장-오브젝트와-의존관계)
-#### [1.1 초난감 DAO](https://github.com/ikkjun/Backend/tree/20240604/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#11-초난감-dao)
+#### [1.1 초난감 DAO](https://github.com/ikkjun/Backend/tree/main/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#11-초난감-dao)
 ##### 1.1.1 User
 ##### 1.1.2 UserDao
 ##### 1.1.3 main()을 이용한 DAO 테스트 코드
 
-#### [1.2 DAO의 분리](https://github.com/ikkjun/Backend/tree/20240604/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#12-dao의-분리)
+#### [1.2 DAO의 분리](https://github.com/ikkjun/Backend/tree/main/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#12-dao의-분리)
 ##### 1.2.1 관심사의 분리
 ##### 1.2.2 커넥션 만들기의 추출
 ##### 1.2.3 DB 커넥션 만들기의 독립
 
-#### [1.3 DAO의 확장](https://github.com/ikkjun/Backend/tree/20240604/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#13-dao의-확장)
+#### [1.3 DAO의 확장](https://github.com/ikkjun/Backend/tree/main/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#13-dao의-확장)
 ##### 1.3.1 클래스의 분리
 ##### 1.3.2 인터페이스의 도입
 ##### 1.3.3 관계 설정 책임의 분리
 ##### 1.3.4 원칙과 패턴
 
-#### [1.4 제어의 역전(IoC)](https://github.com/ikkjun/Backend/tree/20240604/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#14-제어의-역전ioc)
+#### [1.4 제어의 역전(IoC)](https://github.com/ikkjun/Backend/tree/main/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#14-제어의-역전ioc)
 ##### 1.4.1 오브젝트 팩토리
 ##### 1.4.2 오브젝트 팩토리의 활용
 ##### 1.4.3 제어권의 이전을 통한 제어관계 역전
 
-#### [1.5 스프링의 IoC](https://github.com/ikkjun/Backend/tree/20240604/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#15-스프링의-ioc)
+#### [1.5 스프링의 IoC](https://github.com/ikkjun/Backend/tree/main/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#15-스프링의-ioc)
 ##### 1.5.1 오브젝트 팩토리를 이용한 스프링 IoC
 ##### 1.5.2 애플리케이션 컨텍스트의 동작방식
 ##### 1.5.3 스프링 IoC의 용어 정리
 
-#### [1.6 싱글톤 레지스트리와 오브젝트 스코프](https://github.com/ikkjun/Backend/tree/20240604/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#16-싱글톤-레지스트리와-오브젝트-스코프)
+#### [1.6 싱글톤 레지스트리와 오브젝트 스코프](https://github.com/ikkjun/Backend/tree/main/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#16-싱글톤-레지스트리와-오브젝트-스코프)
 ##### 1.6.1 싱글톤 레지스트리로서의 애플리케이션 컨텍스트
 ##### 1.6.2 싱글톤과 오브젝트의 상태
 ##### 1.6.3 스프링 빈의 스코프
 
-#### [1.7 의존관계 주입(DI)](https://github.com/ikkjun/Backend/tree/20240604/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#17-의존관계-주입di)
+#### [1.7 의존관계 주입(DI)](https://github.com/ikkjun/Backend/tree/main/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#17-의존관계-주입di)
 ##### 1.7.1 제어의 역전(IoC)과 의존관계 주입
 ##### 1.7.2 런타임 의존관계 설정
 ##### 1.7.3 의존관계 검색과 주입
 ##### 1.7.4 의존관계 주입의 응용
 ##### 1.7.5 메소드를 이용한 의존관계 주입
 
-#### [1.8 XML을 이용한 설정](https://github.com/ikkjun/Backend/tree/20240604/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#18-xml을-이용한-설정)
+#### [1.8 XML을 이용한 설정](https://github.com/ikkjun/Backend/tree/main/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#18-xml을-이용한-설정)
 ##### 1.8.1 XML 설정
 ##### 1.8.2 XML을 이용하는 애플리케이션 컨텍스트
 ##### 1.8.3 DataSource 인터페이스로 변환
 ##### 1.8.4 프로퍼티 값의 주입
 
-#### [1.9 정리](https://github.com/ikkjun/Backend/tree/20240604/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#19-정리)
+#### [1.9 정리](https://github.com/ikkjun/Backend/tree/main/Spring/책/토비의%20스프링/Vol.1/src/Chapter1#19-정리)
 
 ### 2장 테스트
 #### 2.1 초난감 DAO
